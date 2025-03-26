@@ -43,8 +43,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val inputWeight = edtWidth.text.toString().trim()
             val inputHeight = edtHeight.text.toString().trim()
 
-            val volume = inputLength.toDouble() * inputWeight.toDouble() * inputHeight.toDouble()
-            tvResult.text = volume.toString()
+            var isEmptyFields = false
+
+            when {
+                inputLength.isEmpty() -> {
+                    isEmptyFields = true
+                    edtLength.error = "Field ini tidak boleh kosong, harus diisi"
+                }
+
+                inputWeight.isEmpty() -> {
+                    isEmptyFields = true
+                    edtWidth.error = "Field ini tidak boleh kosong, harus diisi"
+                }
+
+                inputHeight.isEmpty() -> {
+                    isEmptyFields = true
+                    edtHeight.error = "Field ini tidak boleh kosong, harus diisi"
+                }
+            }
+
+            if (!isEmptyFields) {
+
+                val volume = inputLength.toDouble() * inputWeight.toDouble() * inputHeight.toDouble()
+                tvResult.text = volume.toString()
+            }
+
         }
     }
 }
