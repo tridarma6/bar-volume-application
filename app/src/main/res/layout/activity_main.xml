@@ -6,51 +6,86 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="20dp"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/panjang" />
+        android:text="@string/nama"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nim"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/panjang"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/edt_length"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:lines="1"/>
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lebar" />
+        android:text="@string/lebar"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/edt_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:lines="1"/>
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tinggi" />
+        android:text="@string/tinggi"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/edt_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:lines="1"/>
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        />
 
     <Button
         android:id="@+id/btn_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hitung"/>
+        android:text="@string/hitung"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/tv_result"
@@ -59,10 +94,8 @@
         android:gravity="center"
         android:text="@string/hasil"
         android:textSize="24sp"
-        android:textStyle="bold"/>
-
-
-
-
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingTop="16dp"/>
 
 </LinearLayout>
